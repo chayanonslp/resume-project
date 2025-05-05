@@ -1,0 +1,123 @@
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+section {
+    background: #ffffff;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background: #35424a;
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+/* // profile-pic */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 20px auto;
+    display: block;
+}
+
+/* navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #35424a;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin-bottom: 20px;
+}
+.navbar a {
+    color: #ffffff;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+.navbar a:hover {
+    background-color: #45a049;
+    color: white;
+    border-radius:25px; /* Changed from % to 5px */
+    transition: background-color 0.3s ease;  
+}
+.navbar .nav-list{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+}
+.navbar .nav-list li:nth-child(7) {
+    margin-left: auto;
+    margin-right: 0;
+    padding-right: 20px;
+}
+
+/* // skills */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}   
+
+.skills .skill {
+    background-color: #35424a;
+    color: #ffffff;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    flex: 1 1 calc(33% - 20px);
+    box-sizing: border-box;
+}

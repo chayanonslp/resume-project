@@ -51,23 +51,25 @@
 <body>
     <nav class="navbar">
         <ul class="nav-list">
-            
+
             <li><a href="#home">หน้าแรก</a></li>
             <li><a href="#education">การศึกษา</a></li>
             <li><a href="#experience">ประสบการณ์</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#about">เกี่ยวกับฉัน</a></li>
+            <li><a href="#tools">Development Tools</a></li>
+            <li><a href="#about">เกี่ยวกับ</a></li>
             <li>
                 <a href="#home" style="padding: 0; margin: 0;">
-                    <img src="../images/profiles/image.png" alt="profile-pic" class="profile-pic"
-                        style="max-width: 50px; height: auto; margin: 0;" />
+                    <img src="../images/profiles/image.webp" alt="profile-pic" class="profile-pic"
+                        style="width: 50px; height: 50px; margin: 0; object-fit: cover; border-radius: 50%;" />
                 </a>
             </li>
+
         </ul>
     </nav>
     <header id="home" class="header">
-        <img src="../images/profiles/image.png" alt="Profile Picture" class="profile-pic">
+        <img src="../images/profiles/image.webp" alt="Profile Picture" class="profile-pic" style="object-fit: cover;">
         <h1>ชญานนท์ จงสุข</h1>
         <p> 064-458-0471 | chayanon.slp@gmail.com</p>
     </header>
@@ -85,10 +87,15 @@
             <!-- เพิ่มรายการการศึกษาอื่นๆ ได้ที่นี่ -->
         </div>
     </section>
-    
+
     <section id="experience" class="py-5 bg-light">
         <div class="container">
             <h2 class="mb-4">ประสบการณ์</h2>
+            <div class="mb-4">
+                <h5 class="mb-1"><strong>ฝึกงานสหกิจศึกษา</strong> - G-Able Group</h5>
+                <p class="text-muted mb-1">ระยะเวลา: พฤศจิกายน 2564 - กุมภาพันธ์ 2565</p>
+                <p>ตำแหน่ง: นักศึกษาฝึกงาน (นักพัฒนาซอฟต์แวร์)</p>
+            </div>
             <div class="mb-4">
                 <h5 class="mb-1"><strong>Web Developer</strong> - Sun Gateway</h5>
                 <p class="text-muted mb-1">ระยะเวลา: 2 ปี 4 เดือน (2566 - 2568)</p>
@@ -97,10 +104,12 @@
             <!-- เพิ่มรายการประสบการณ์อื่น ๆ ด้านล่างนี้ได้ -->
         </div>
     </section>
-    
+
     <section id="skills" class="mt-4">
         <div class="container">
             <h2 class="mb-3">Skills</h2>
+            <!-- Frontend -->
+            <h5 class="mt-4">Frontend</h5>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                 <div class="col">
                     <div class="bg-light p-2 rounded text-center shadow-sm">HTML</div>
@@ -115,49 +124,105 @@
                     <div class="bg-light p-2 rounded text-center shadow-sm">JavaScript</div>
                 </div>
                 <div class="col">
-                    <div class="bg-light p-2 rounded text-center shadow-sm">Node.js</div>
-                </div>
-                <div class="col">
                     <div class="bg-light p-2 rounded text-center shadow-sm">PrimeFaces</div>
+                </div>
+            </div>
+
+            <!-- Backend -->
+            <h5 class="mt-4">Backend</h5>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
+                <div class="col">
+                    <div class="bg-light p-2 rounded text-center shadow-sm">Node.js</div>
                 </div>
                 <div class="col">
                     <div class="bg-light p-2 rounded text-center shadow-sm">Java</div>
                 </div>
+            </div>
+
+            <!-- Database -->
+            <h5 class="mt-4">Database</h5>
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                 <div class="col">
                     <div class="bg-light p-2 rounded text-center shadow-sm">MySQL</div>
                 </div>
                 <div class="col">
                     <div class="bg-light p-2 rounded text-center shadow-sm">SQL Server</div>
                 </div>
-                <!-- เพิ่มทักษะอื่น ๆ ตามต้องการ -->
             </div>
+
         </div>
     </section>
-
     <section id="projects" class="py-5">
         <div class="container">
             <h2 class="mb-4">Projects</h2>
             <div style="display: flex; flex-wrap: wrap; gap: 20px;">
-                <div style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <strong>✅ Web Application</strong>
-                    <p>แอปพลิเคชันสำหรับจัดการงานและโปรเจกต์อย่างมีประสิทธิภาพ โดยใช้ Java, JSF และ SQL Server</p>
+                    <p>แอปพลิเคชันสำหรับจัดการงานและโปรเจกต์อย่างมีประสิทธิภาพ โดยใช้ Java, PrimeFaces และ SQL Server
+                    </p>
                 </div>
-                <div style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <strong>✅ CRM</strong>
-                    <p>ระบบบริหารความสัมพันธ์ลูกค้า (CRM) พัฒนาโดยใช้ PrimeFaces และฐานข้อมูล MySQL</p>
+                    <p>ระบบบริหารความสัมพันธ์ลูกค้า (CRM) พัฒนาโดยใช้ PrimeFaces, Java และฐานข้อมูล MySQL</p>
                 </div>
-                <div style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
                     <strong>✅ Resume Website</strong>
                     <p>เว็บไซต์เรซูเม่ส่วนตัว แสดงทักษะและโปรเจกต์ ใช้ HTML/CSS/JavaScript</p>
                 </div>
             </div>
         </div>
     </section>
-    
+    <section id="tools" class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Development Tools:</h2>
+            <div style="display: flex; flex-wrap: wrap; gap: 20px;">
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ Visual Studio Code</strong>
+                    <p>เครื่องมือพัฒนาโค้ดที่มีฟีเจอร์ครบครัน รองรับหลายภาษา</p>
+                </div>
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ NetBeans</strong>
+                    <p>IDE สำหรับพัฒนา Java พร้อมฟีเจอร์ครบถ้วน</p>
+                </div>
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ Postman </strong>
+                    <p>เครื่องมือสำหรับการทดสอบ API </p>
+                </div>
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ Git</strong>
+                    <p>เครื่องมือสำหรับการจัดการเวอร์ชันของโค้ด</p>
+                </div>
+
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ TortoiseSVN</strong>
+                    <p>เครื่องมือสำหรับการจัดการเวอร์ชันของโค้ดที่ใช้ระบบ SVN</p>
+                </div>
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ HeidiSQL</strong>
+                    <p>เครื่องมือสำหรับการจัดการฐานข้อมูล MySQL</p>
+                </div>
+                <div
+                    style="flex: 1 1 calc(33.333% - 20px); background: #f8f9fa; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                    <strong>✅ Navicat</strong>
+                    <p>เครื่องมือจัดการฐานข้อมูลที่รองรับหลายประเภท เช่น MySQL, PostgreSQL และ Oracle</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <section id="about" class="py-5 bg-light">
         <div class="container" style="line-height: 1;">
-            <h2 class="mb-4">เกี่ยวกับฉัน</h2>
-            <p>สวัสดีครับ ผมชื่อ <strong>ชญานนท์ จงสุข</strong> มีประสบการณ์ในการพัฒนาเว็บแอปพลิเคชัน พร้อมทั้งทำงานร่วมกับทีมในการสร้างผลิตภัณฑ์ที่มีคุณภาพ</p>
+            <h2 class="mb-4">เกี่ยวกับ</h2>
+            <p>สวัสดีครับ ผมชื่อ <strong>ชญานนท์ จงสุข</strong> มีประสบการณ์ในการพัฒนาเว็บแอปพลิเคชัน
+                พร้อมทั้งทำงานร่วมกับทีมในการสร้างผลิตภัณฑ์ที่มีคุณภาพ</p>
             <p>ผมสนใจเทคโนโลยีใหม่ ๆ อยู่เสมอ และมุ่งมั่นที่จะพัฒนาทักษะของตนเองให้ทันต่อการเปลี่ยนแปลงในสายงานไอที</p>
             <p>สามารถติดต่อผมได้ผ่าน:</p>
             <ul>
@@ -166,7 +231,7 @@
             </ul>
         </div>
     </section>
-    
+
     <script src="scripts/main.js"></script>
 </body>
 

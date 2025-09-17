@@ -97,6 +97,14 @@ footer {
     margin-bottom: 20px;
 }
 
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 10px;
+        margin: 0;
+    }
+
+}
+
 .navbar a {
     color: #ffffff;
     padding: 14px 20px;
@@ -146,32 +154,30 @@ footer {
 
 /* fade // ใส่ class="fade-section" ในแต่ละ content ที่ต้องการให้ค่อย ๆ ปรากฏ */
 .fade-section {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* เมื่อเลื่อนถึงจะเปลี่ยนเป็นโชว์ */
 .fade-section.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* fade-item สำหรับแต่ละ item ภายใน section ที่ต้องการให้ค่อย ๆ ปรากฏ */
 .fade-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 .fade-item.show {
-  opacity: 1;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ตัวอย่าง stagger แบบ CSS variable */
 .fade-item {
-  transition-delay: var(--delay, 0s);
+    transition-delay: var(--delay, 0s);
 }
-
- 

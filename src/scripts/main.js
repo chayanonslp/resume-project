@@ -1,6 +1,6 @@
 // This file is intentionally left blank.
-  // JavaScript สำหรับเลื่อนหน้าเว็บพร้อม Offset
-  document.querySelectorAll('.nav-list a').forEach(anchor => {
+// JavaScript สำหรับเลื่อนหน้าเว็บพร้อม Offset
+document.querySelectorAll('.nav-list a').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
         const targetId = this.getAttribute('href').substring(1);
@@ -18,21 +18,44 @@
         }
     });
 });
- 
+
 // JavaScript สำหรับการแสดงผลแบบ Fade-in เมื่อเลื่อนหน้าเว็บ
 document.addEventListener("DOMContentLoaded", () => {
-  const sections = document.querySelectorAll(".fade-section");
+    const sections = document.querySelectorAll(".fade-section");
 
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        obs.unobserve(entry.target); // ไม่ต้องสังเกตอีกเมื่อแสดงแล้ว
-      }
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("show");
+                obs.unobserve(entry.target); // ไม่ต้องสังเกตอีกเมื่อแสดงแล้ว
+            }
+        });
+    }, {
+        threshold: 0.2   // 20% ของ element โผล่ขึ้นมาแล้วค่อยแสดง
     });
-  }, {
-    threshold: 0.2   // 20% ของ element โผล่ขึ้นมาแล้วค่อยแสดง
-  });
 
-  sections.forEach(section => observer.observe(section));
+    sections.forEach(section => observer.observe(section));
 });
+
+// JavaScript สำหรับการแสดงผลแบบ Fade-in ทีละ item เมื่อเลื่อนหน้าเว็บ
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll(".fade-section");
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const items = entry.target.querySelectorAll(".fade-item");
+                items.forEach((item, index) => {
+                    item.style.setProperty("--delay", `${index * 0.2}s`); // หน่วง 0.2 วินาทีต่อ item
+                    item.classList.add("show");
+                });
+                obs.unobserve(entry.target); // ไม่ต้องสังเกต section นี้อีก
+            }
+        });
+    }, {
+        threshold: 0.2
+    });
+
+    sections.forEach(section => observer.observe(section));
+});
+

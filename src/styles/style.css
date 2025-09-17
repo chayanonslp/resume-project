@@ -156,4 +156,22 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* fade-item สำหรับแต่ละ item ภายใน section ที่ต้องการให้ค่อย ๆ ปรากฏ */
+.fade-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ตัวอย่าง stagger แบบ CSS variable */
+.fade-item {
+  transition-delay: var(--delay, 0s);
+}
+
  

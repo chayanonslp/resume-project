@@ -18,7 +18,7 @@
         }
     });
 });
-
+ 
 // JavaScript สำหรับการแสดงผลแบบ Fade-in เมื่อเลื่อนหน้าเว็บ
 document.addEventListener("DOMContentLoaded", () => {
   const sections = document.querySelectorAll(".fade-section");

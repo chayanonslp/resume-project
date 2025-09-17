@@ -4,6 +4,24 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+
+
+}
+
+/* ซ่อน scrollbar ทุกเบราว์เซอร์ */
+html,
+body {
+    overflow: auto;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE/Edge เก่า */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari */
 }
 
 .container {
@@ -53,6 +71,7 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
 /* // profile-pic */
 .profile-pic {
     width: 150px;
@@ -77,19 +96,23 @@ footer {
     width: 100%;
     margin-bottom: 20px;
 }
+
 .navbar a {
     color: #ffffff;
     padding: 14px 20px;
     text-decoration: none;
     text-align: center;
 }
+
 .navbar a:hover {
     background-color: #45a049;
     color: white;
-    border-radius:25px; /* Changed from % to 5px */
-    transition: background-color 0.3s ease;  
+    border-radius: 25px;
+    /* Changed from % to 5px */
+    transition: background-color 0.3s ease;
 }
-.navbar .nav-list{
+
+.navbar .nav-list {
     display: flex;
     justify-content: start;
     align-items: center;
@@ -99,10 +122,9 @@ footer {
     list-style: none;
     width: 100%;
 }
-.navbar .nav-list li:nth-child(7) {
-    margin-left: auto;
-    margin-right: 0;
-    padding-right: 20px;
+
+.navbar .nav-list li:nth-child(1) {
+    padding: 0px 20px;
 }
 
 /* // skills */
@@ -110,7 +132,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}   
+}
 
 .skills .skill {
     background-color: #35424a;
@@ -120,4 +142,17 @@ footer {
     border-radius: 5px;
     flex: 1 1 calc(33% - 20px);
     box-sizing: border-box;
+}
+
+/* fade // ใส่ class="fade-section" ในแต่ละ content ที่ต้องการให้ค่อย ๆ ปรากฏ */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* เมื่อเลื่อนถึงจะเปลี่ยนเป็นโชว์ */
+.fade-section.show {
+  opacity: 1;
+  transform: translateY(0);
 }

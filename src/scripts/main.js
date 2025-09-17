@@ -18,3 +18,21 @@
         }
     });
 });
+
+// JavaScript สำหรับการแสดงผลแบบ Fade-in เมื่อเลื่อนหน้าเว็บ
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll(".fade-section");
+
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        obs.unobserve(entry.target); // ไม่ต้องสังเกตอีกเมื่อแสดงแล้ว
+      }
+    });
+  }, {
+    threshold: 0.2   // 20% ของ element โผล่ขึ้นมาแล้วค่อยแสดง
+  });
+
+  sections.forEach(section => observer.observe(section));
+});
